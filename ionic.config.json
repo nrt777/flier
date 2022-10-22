@@ -1,0 +1,7 @@
+{
+  "name": "flier",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
