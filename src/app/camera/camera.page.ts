@@ -1,14 +1,13 @@
-import { Tab2PageModule } from './tab2.module';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Camera CameraResultType, CameraSource } from '@capacitor/camera';
 import { Share } from '@capacitor/share';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-camera',
+  templateUrl: './camera.page.html',
+  styleUrls: ['./camera.page.scss'],
 })
-export class Tab2Page implements OnInit {
+export class CameraPage implements OnInit {
   captureImage: any;
   imageSrc: any;
   constructor() { }
