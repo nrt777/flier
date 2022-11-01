@@ -23,12 +23,21 @@
   </div>
   </ion-col>
   </ion-row>
-  <ion-row class="ion-justify-content-center  ion-align-items-center">
-    <div >Waiting for sender</div>
-  </ion-row>
-
 </ion-grid>
- <ion-fab class="btn" vertical="bottom"  horizontal="start" slot="fixed" >
-      <ion-button color="primary" expand="full" (click)="presentAlert()"  shape="round">Choose files</ion-button>
-   </ion-fab>
+
+<ion-grid >
+  <ion-row class="ion-justify-content-center ">
+    <div>
+      <ion-spinner  name="dots" color="medium"></ion-spinner>
+    </div>
+  </ion-row>
+  <ion-row class="ion-justify-content-center ">
+    <div>Waiting for sender</div>
+  </ion-row>
+</ion-grid>
+
+<ion-fab class="btn" vertical="bottom"  horizontal="start" slot="fixed" >
+  <ion-button color="primary" expand="full" (click)="presentAlert()"  shape="round">Choose files</ion-button>
+</ion-fab>
 </ion-content>
+

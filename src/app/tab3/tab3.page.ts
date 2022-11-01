@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { DownloadPage } from '../download/download.page';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -8,9 +9,11 @@ import { AlertController } from '@ionic/angular';
 export class Tab3Page {
   handlerMessage = '';
   roleMessage = '';
+  component = Tab3Page;
   constructor(private alertController: AlertController) {}
 
   async presentAlert() {
+
     const alert = await this.alertController.create({
       header: 'Warning',
       subHeader: '',
