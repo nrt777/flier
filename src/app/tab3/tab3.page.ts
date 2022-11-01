@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { DownloadPage } from '../download/download.page';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -10,10 +10,12 @@ export class Tab3Page {
   handlerMessage = '';
   roleMessage = '';
   component = Tab3Page;
-  constructor(private alertController: AlertController) {}
+  constructor(
+    private alertController: AlertController,
+    private router: Router
+  ) {}
 
   async presentAlert() {
-
     const alert = await this.alertController.create({
       header: 'Warning',
       subHeader: '',
@@ -31,7 +33,7 @@ export class Tab3Page {
           text: 'Accept',
           role: 'confirm',
           handler: () => {
-            this.handlerMessage = 'Alert confirmed';
+            this.router.navigate(['/download']);
           },
         },
       ],
