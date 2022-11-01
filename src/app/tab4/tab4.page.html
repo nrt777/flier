@@ -1,9 +1,34 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>tab4</ion-title>
+    <ion-title> History </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="bg">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">History</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
+  <ion-card>
+    <ion-card-title>Storage in used</ion-card-title>
+    <ion-card-content>[125 MB] from [20 GB]</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>Sent</ion-card-title>
+    <ion-card-content class="flex">
+      <div class="value">[125] MB</div>
+      <div  class="value">[25] MB</div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>Receive</ion-card-title>
+    <ion-card-content class="flex">
+      <div class="value">[125] MB</div>
+      <div  class="value">[25] MB</div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

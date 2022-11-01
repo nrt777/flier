@@ -1,0 +1,25 @@
+ion-card {
+  padding: 50px;
+  border-radius: 10px;
+}
+.value {
+  // width: 30vh;
+  // height: 30vh;
+  aspect-ratio: 1/1;
+
+  padding: 15%;
+  margin: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex{
+  display:flex;
+  justify-content: center;
+}
+.bg{
+  background-color:#ed5252;
+}
