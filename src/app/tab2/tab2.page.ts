@@ -1,4 +1,3 @@
-import { Tab2PageModule } from './tab2.module';
 import { Component } from '@angular/core';
 import { Camera CameraResultType, CameraSource } from '@capacitor/camera';
 import { Share } from '@capacitor/share';
