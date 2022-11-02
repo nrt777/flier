@@ -1,12 +1,31 @@
+import { Tab2PageModule } from './tab2.module';
 import { Component } from '@angular/core';
+import { Camera CameraResultType, CameraSource } from '@capacitor/camera';
+import { Share } from '@capacitor/share';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit {
+  captureImage: any;
+  imageSrc: any;
+  constructor() { }
+  ngOnInit() { }
 
-  constructor() {}
+  async takePicture() {
+    const image = await Camera.getPhoto({
+      quality: 90;
+      source: CameraSource.Camera,
+      resultType: CameraResultType.Uri
+    })
+    this.captureImage = image;
+    this.imageSrc = image.webPath;
+  }
+
+  async sharePicture(){
+    await Share.share({ url: this.captureImage.path });
+  }
 
 }
